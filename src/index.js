@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
-import App from './App';
+import ProductTable from './Components/ProductTable';
 import * as serviceWorker from './serviceWorker';
+
+
+const  object = [
+  {category :"Electronics", price : "100", name : "carte électronique"},
+  {category :"Clothes", price : "50", name : "shirt"},
+  {category :"Car", price : "50000", name : "mercedes"},
+  {category :"Tools", price : "200", name : "pen"}
+]
+
+const Main = (props) => {
+return (
+   object.map (item => {
+    return (
+    <ProductTable category= {item.category} price = {item.price} name = {item.name}/>
+     )  })
+
+                      
+)}
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+   <>
+   
+   <Main/> 
+  </>
   </React.StrictMode>,
   document.getElementById('root')
 );
