@@ -13,23 +13,9 @@ const  object = [
   {category :"Tools", price : "200", name : "pen"}
 ]
 
-const Main = (props) => {
-return (
-   object.map (item => {
-    return (
-    <ProductTable category= {item.category} price = {item.price} name = {item.name}/>
-     )  })
-
-                      
-)}
-
-
 ReactDOM.render(
   <React.StrictMode>
-   <>
-   
-   <Main/> 
-  </>
+   <ProductTable object={object}/> 
   </React.StrictMode>,
   document.getElementById('root')
 );
