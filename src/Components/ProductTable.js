@@ -7,11 +7,19 @@ const ProductTable = (props) => {
     <Table>
         
       <tbody>
-        <tr>
-          <td>{props.category}</td>
-          <td>{props.price}</td>
-          <td>{props.name}</td>
+    {props.object.map(item =>{ 
+     return(
+     
+      <tr>
+          <td>{item.category}</td>
+          <td>{item.price}</td>
+          <td>{item.name}</td>
         </tr>
+     
+     )
+     
+    }}
+       
       </tbody>
     </Table>
   );
